@@ -7,6 +7,7 @@
     <title>Ecommerce Website - Shopping Cart</title>
     <!-- Link to CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <!-- Box Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -17,7 +18,7 @@
         <div class="nav container">
             <a href="#" class="logo">Ecommerce</a>
             <!-- Cart-Icon -->
-            <i class='bx bx-cart' id="cart-icon" title="View Cart"></i>
+            <i class='bx bx bx-cart' id="cart-icon"></i>
             <!-- Cart -->
             <div class="cart">
                 <h2 class="cart-title">Your Cart</h2>
@@ -33,7 +34,7 @@
                 <!-- Buy Button -->
                 <button type="button" class="btn-buy">Buy Now</button>
                 <!-- Cart Close -->
-                <i class='bx bx-x' id="close-cart" title="Close Cart"></i>
+                <i class='bx bx-x' id="close-cart"></i>
 
             </div>
         </div>
@@ -45,64 +46,62 @@
         <div class="shop-content">
             <!-- Box 1 -->
             <div class="product-box">
-                <img src="img/product1.jpg" alt="" class="product-img stock">
-                <h2 class="product-title">AEROREADY SHIRT</h2>
+                <a href="product1.html"><img src="img/product1.jpg" alt="" class="product-img">
+                <h2 class="product-title">AEROREADY SHIRT</h2></a>
                 <span class="price">Ksh. 2500</span>
-                <i class='bx bx-plus add-cart' title="Add to Cart"></i>
-                <i class='bx bxs-cart-add add-cart' title="Add to Cart"></i>
+                <i class='bx bx-cart-add add-cart'></i>
             </div>
             <!-- Box 2 -->
             <div class="product-box">
-                <img src="img/product2.jpg" alt="" class="product-img stock">
-                <h2 class="product-title">WIRELESS EARBUDS</h2>
+                <a href="product2.html"><img src="img/product2.jpg" alt="" class="product-img">
+                <h2 class="product-title">WIRELESS EARBUDS</h2></a>
                 <span class="price">Ksh. 10000</span>
-                <i class='bx bxs-cart-add add-cart' title="Add to Cart"></i>
+                <i class='bx bx-cart-add add-cart'></i>
             </div>
             <!-- Box 3 -->
             <div class="product-box">
-                <img src="img/product3.jpg" alt="" class="product-img stock">
-                <h2 class="product-title">HOODED PARKA</h2>
+                <a href="product3.html"><img src="img/product3.jpg" alt="" class="product-img">
+                <h2 class="product-title">HOODED PARKA</h2></a>
                 <span class="price">Ksh. 4500</span>
-                <i class='bx bxs-cart-add add-cart' title="Add to Cart"></i>
+                <i class='bx bx-cart-add add-cart'></i>
             </div>
             <!-- Box 4 -->
             <div class="product-box">
-                <img src="img/product4.jpg" alt="" class="product-img stock">
-                <h2 class="product-title">STRAW METAL BOTTLE</h2>
+                <a href="product4.html"><img src="img/product4.jpg" alt="" class="product-img">
+                <h2 class="product-title">STRAW METAL BOTTLE</h2></a>
                 <span class="price">Ksh. 2400</span>
-                <i class='bx bxs-cart-add add-cart' title="Add to Cart"></i>
+                <i class='bx bx-cart-add add-cart'></i>
             </div>
             <!-- Box 5 -->
             <div class="product-box">
-                <img src="img/product5.jpg" alt="" class="product-img stock">
-                <h2 class="product-title">METAL Sunglasses</h2>
+                <a href="product5.html"><img src="img/product5.jpg" alt="" class="product-img">
+                <h2 class="product-title">METAL Sunglasses</h2></a>
                 <span class="price">Ksh. 5000</span>
-                <i class='bx bxs-cart-add add-cart' title="Add to Cart"></i>
+                <i class='bx bx-cart-add add-cart'></i>
             </div>
             <!-- Box 6 -->
             <div class="product-box">
-                <img src="img/product6.jpg" alt="" class="product-img out-of-stock">
-                <h2 class="product-title">BACK HAT</h2>
+                <a href="product6.html"><img src="img/product6.jpg" alt="" class="product-img">
+                <h2 class="product-title">BACK HAT</h2></a>
                 <span class="price">Ksh. 5000</span>
-                <i class='bx bxs-cart-add add-cart' title="Add to Cart"></i>
+                <i class='bx bx-cart-add add-cart'></i>
             </div>
             <!-- Box 7 -->
             <div class="product-box">
-                <img src="img/product7.jpg" alt="" class="product-img stock">
-                <h2 class="product-title">BACKPACK</h2>
+                <a href="product7.html"><img src="img/product7.jpg" alt="" class="product-img">
+                <h2 class="product-title">BACKPACK</h2></a>
                 <span class="price">Ksh. 7000</span>
-                <i class='bx bxs-cart-add add-cart' title="Add to Cart"></i>
+                <i class='bx bx-cart-add add-cart'></i>
             </div>
             <!-- Box 8 -->
             <div class="product-box">
-                <img src="img/product8.jpg" alt="" class="product-img stock">
-                <h2 class="product-title">ULTRABOOST 22</h2>
+                <a href="product8.html"><img src="img/product8.jpg" alt="" class="product-img">
+                <h2 class="product-title">ULTRABOOST 22</h2></a>
                 <span class="price">Ksh. 4500</span>
-                <i class='bx bxs-cart-add add-cart' title="Add to Cart"></i>
+                <i class='bx bx-shopping-bag add-cart'></i>
             </div>
         </div>
     </section>
-    
 
     <footer>
         <div class="wrapper">
@@ -157,6 +156,6 @@
     </footer>
     <!-- Link  -->
     <script src="js/main.js"></script>
-    <script src="ecommerce.js"></script>
+
 </body>
 </html>
