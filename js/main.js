@@ -53,17 +53,79 @@ function ready() {
 //     }
 //     updateTotal();
 // }
+// function buyButtonClicked() {
+//     var confirmation = confirm("Are you sure you want to place this order?");
+//     if (confirmation) {
+//         alert("Your order is placed.");
+//         var cartContent = document.getElementsByClassName("cart-content")[0];
+//         while (cartContent.hasChildNodes()) {
+//             cartContent.removeChild(cartContent.firstChild);
+//         }
+//         updateTotal();
+//     }
+// }
+
+
 function buyButtonClicked() {
-    var confirmation = confirm("Are you sure you want to place this order?");
-    if (confirmation) {
-        alert("Your order is placed.");
-        var cartContent = document.getElementsByClassName("cart-content")[0];
-        while (cartContent.hasChildNodes()) {
-            cartContent.removeChild(cartContent.firstChild);
-        }
-        updateTotal();
-    }
+    var confirmationBox = document.createElement("div");
+    confirmationBox.classList.add("confirmation-box");
+    var confirmationBoxContent = `
+                            <h3>Are you sure you want to place this order?</h3>
+                            <div class="button-container">
+                                <button class="confirm-btn">Yes</button>
+                                <button class="cancel-btn">No</button>
+                            </div>
+                            `;
+    confirmationBox.innerHTML = confirmationBoxContent;
+    document.body.appendChild(confirmationBox);
+    var confirmBtn = document.querySelector(".confirm-btn");
+    var cancelBtn = document.querySelector(".cancel-btn");
+    confirmBtn.addEventListener("click", function () {
+        document.body.removeChild(confirmationBox);
+        var successBox = document.createElement("div");
+        successBox.classList.add("success-box");
+        var successBoxContent = `
+                                <p>Your order has been placed.</p>
+                                <button class="close-btn">Close</button>
+                                `;
+        successBox.innerHTML = successBoxContent;
+        document.body.appendChild(successBox);
+        var closeBtn = document.querySelector(".close-btn");
+        closeBtn.addEventListener("click", function () {
+            document.body.removeChild(successBox);
+            var cartContent = document.getElementsByClassName("cart-content")[0];
+            while (cartContent.hasChildNodes()) {
+                cartContent.removeChild(cartContent.firstChild);
+            }
+            updateTotal();
+        });
+    });
+    cancelBtn.addEventListener("click", function () {
+        document.body.removeChild(confirmationBox);
+    });
 }
+
+// function buyButtonClicked() {
+//     var confirmation = confirm("Are you sure you want to place this order?");
+//     if (confirmation) {
+//         var confirmationMessage = document.createElement("div");
+//         confirmationMessage.innerText = "Your order is placed.";
+//         confirmationMessage.classList.add("confirmation-message");
+//         document.body.appendChild(confirmationMessage);
+
+//         var cartContent = document.getElementsByClassName("cart-content")[0];
+//         while (cartContent.hasChildNodes()) {
+//             cartContent.removeChild(cartContent.firstChild);
+//         }
+//         updateTotal();
+
+//         setTimeout(() => {
+//             document.body.removeChild(confirmationMessage);
+//         }, 3000);
+//     }
+// }
+
+
 
 
 // Remove Items from Cart

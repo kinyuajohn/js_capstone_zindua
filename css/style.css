@@ -197,6 +197,69 @@ header {
 .add-cart:hover {
     background: hsl(249, 32%, 17%);
 }
+/* Buy Button ules */
+.confirmation-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    width: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2%;
+}
+
+.confirm-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.success-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    width: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
 /* Breakpoints / Making Responsive */
 @media (max-width: 1080px) {
     .nav {
@@ -232,3 +295,16 @@ header {
         width: 280px;
     }
 }
+
+/* .confirmation-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    z-index: 999;
+} */
