@@ -4,105 +4,152 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce Website - Shopping Cart</title>
-    <!-- Link to CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Box Icons -->
+    <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Jamii Shopper</title>
 </head>
 <body>
-    <!-- Header     -->
     <header>
-        <!-- Nav -->
         <div class="nav container">
-            <a href="#" class="logo">Ecommerce</a>
-            <!-- Cart-Icon -->
-            <i class='bx bx-shopping-bag' id="cart-icon"></i>
-            <!-- Cart -->
-            <div class="cart">
-                <h2 class="cart-title">Your Cart</h2>
-                <!-- Content -->
-                <div class="cart-content">
+            <a href="#" class = "logo">Jamii Shopper</a>
+            <!--cart icon-->
+            <i class='bx bx-shopping-bag' id = "cart-icon"></i>
 
+           <div class="cart">
+                <h2 class = "cart-title">Your cart</h2>
+
+                <div class="cart-content">
+                    
                 </div>
-                <!-- Total -->
+                <!--Total-->
                 <div class="total">
                     <div class="total-title">Total</div>
-                    <div class="total-price">Ksh. 0</div>
+                    <div class="total-price">KSH 0</div>
                 </div>
-                <!-- Buy Button -->
-                <button type="button" class="btn-buy">Buy Now</button>
-                <!-- Cart Close -->
-                <i class='bx bx-x' id="close-cart"></i>
-
+                <!--Buy button-->
+                <button type = "button" class = "btn-buy">Buy products</button>
+                <!--Cart close button-->
+                <i class='bx bx-x' id = "close-cart"></i>
             </div>
         </div>
     </header>
-    <!-- Shop -->
+
     <section class="shop container">
-        <h2 class="section-title">Shop Products</h2>
-        <!-- Content -->
+        <div class="section-title">Shop Products</div>
         <div class="shop-content">
-            <!-- Box 1 -->
-            <div class="product-box">
-                <img src="img/product1.jpg" alt="" class="product-img">
-                <h2 class="product-title">AEROREADY SHIRT</h2>
-                <span class="price">Ksh. 2500</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
+            
+            <!--Box 1-->
+            <div class="products">
+                <a href="product1.html"><img src="images/product1.jpg" class="product-img">
+                <h2 class="products-title">AEROREADY SHIRT</h2></a>
+                <span class="price">KSH 2500</span>
+                <i class='bx bx-shopping-bag add-cart' title = "Add to your cart"></i>
             </div>
-            <!-- Box 2 -->
-            <div class="product-box">
-                <img src="img/product2.jpg" alt="" class="product-img">
-                <h2 class="product-title">WIRELESS EARBUDS</h2>
-                <span class="price">Ksh. 10000</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
+
+            <!--Box 2-->
+            <div class="products">
+                <a href="product2.html"><img src="images/product2.jpg" class="product-img">
+                <h2 class="products-title">WIRELESS EARBUDS</h2></a>
+                <span class="price">KSH 1200</span>
+                <i class='bx bx-shopping-bag add-cart' title = "Add to your cart"></i>
             </div>
-            <!-- Box 3 -->
-            <div class="product-box">
-                <img src="img/product3.jpg" alt="" class="product-img">
-                <h2 class="product-title">HOODED PARKA</h2>
-                <span class="price">Ksh. 4500</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
+
+            <!--Box 3-->
+            <div class="products">
+                <a href="product3.html"><img src="images/product3.jpg" class="product-img">
+                <h2 class="products-title">HOODED PARKAW</h2></a>
+                <span class="price">KSH 4500</span>
+                <i class='bx bx-shopping-bag add-cart' title = "Add to your cart"></i>
             </div>
-            <!-- Box 4 -->
-            <div class="product-box">
-                <img src="img/product4.jpg" alt="" class="product-img">
-                <h2 class="product-title">STRAW METAL BOTTLE</h2>
-                <span class="price">Ksh. 2400</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
+
+            <!--Box 4-->
+            <div class="products">
+                <a href="product4.html"><img src="images/product4.jpg" class="product-img">
+                <h2 class="products-title">STRAW METAL BOTTLE</h2></a>
+                <span class="price">KSH 500</span>
+                <i class='bx bx-shopping-bag add-cart' title = "Add to your cart"></i>
             </div>
-            <!-- Box 5 -->
-            <div class="product-box">
-                <img src="img/product5.jpg" alt="" class="product-img">
-                <h2 class="product-title">METAL Sunglasses</h2>
-                <span class="price">Ksh. 5000</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
+
+            <!--Box 5-->
+            <div class="products">
+                <a href="product5.html"><img src="images/product5.jpg" class="product-img">
+                <h2 class="products-title">SILVER METAL SUN GLASSES</h2></a>
+                <span class="price">KSH 6500</span>
+                <i class='bx bx-shopping-bag add-cart' title = "Add to your cart"></i>
             </div>
-            <!-- Box 6 -->
-            <div class="product-box">
-                <img src="img/product6.jpg" alt="" class="product-img">
-                <h2 class="product-title">BACK HAT</h2>
-                <span class="price">Ksh. 5000</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
+
+            <!--Box 6-->
+            <div class="products">
+                <a href="product6.html"><img src="images/product6.jpg" class="product-img">
+                <h2 class="products-title">BACK HAT</h2></a>
+                <span class="price">KSH 1200</span>
+                <i class='bx bx-shopping-bag add-cart' title = "Add to your cart"></i>
             </div>
-            <!-- Box 7 -->
-            <div class="product-box">
-                <img src="img/product7.jpg" alt="" class="product-img">
-                <h2 class="product-title">BACKPACK</h2>
-                <span class="price">Ksh. 7000</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
+
+            <!--Box 7-->
+            <div class="products">
+                <a href="product7.html"><img src="images/product7.jpg" class="product-img">
+                <h2 class="products-title">BACK PACK</h2></a>
+                <span class="price">KSH 2500</span>
+                <i class='bx bx-shopping-bag add-cart' title = "Add to your cart"></i>
             </div>
-            <!-- Box 8 -->
-            <div class="product-box">
-                <img src="img/product8.jpg" alt="" class="product-img">
-                <h2 class="product-title">ULTRABOOST 22</h2>
-                <span class="price">Ksh. 4500</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
+
+            <!--Box 8-->
+            <div class="products">
+                <a href="product8.html"><img src="images/product8.jpg" class="product-img">
+                <h2 class="products-title">ULTRABOOST 22</h2></a>
+                <span class="price">KSH 2500</span>
+                <i class='bx bx-shopping-bag add-cart' title = "Add to your cart"></i>
             </div>
         </div>
-    </section>
-    <!-- Link  -->
-    <script src="js/main.js"></script>
+    </section> 
 
+    <footer>
+        <div class="wrapper">
+            <ul class = "footer-main">
+                <li><h2>LET US HELP YOU</h2></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="help.html">Help Centre</a></li>
+                <li><a href="instructions.html">How to shop on Jamii Shopper</a></li>
+                <li><a href="shipping.html">Shipping and delivery services</a></li>
+                <li><a href="return.html">Return Policy</a></li>
+                <li><a href="report.html">Payment Methods</a></li>
+            </ul>
+
+            <ul class = "about-us">
+                <li><h2>ABOUT US</h2></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="about.html">Our patners</a></li>
+                <li><a href="about.html">Payment methods</a></li>
+                <li><a href="about.html">Return and refund policy</a></li>
+                <li><a href="terms.html">Terms and conditions</a></li>
+                <li><a href="terms.html">Privacy policy</a></li>
+            </ul>
+
+            <ul class = "brands">
+                <li><h2>Brands</h2></li>
+                <li><a href="">Clothing and fashion</a></li>
+                <li><a href="">Electronics and appliances</a></li>
+                <li><a href="">Stationaries</a></li>
+                <li><a href="">Home Decor</a></li>
+                <li><a href="">Sporting goods</a></li>
+                <li><a href="">Supermarket</a></li>
+            </ul>
+
+            <div class="footer-sm">
+                <a href="">
+                    <img src="images/icons8-youtube-50.png" alt="YouTube icon">
+                </a>
+                <a href="">
+                    <img src="images/icons8-twitter-50.png" alt="Twitter icon">
+                </a>
+                <a href="">
+                    <img src="images/icons8-instagram-48.png" alt="Instagram icon">
+                </a> 
+            </div>
+        </div>
+    </footer>
+
+    <script src="ecommerce.js"></script>
 </body>
 </html>
