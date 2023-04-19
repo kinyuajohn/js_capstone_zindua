@@ -43,17 +43,60 @@ function ready() {
     document
         .getElementsByClassName("btn-buy")[0]
         .addEventListener("click", buyButtonClicked);
-}
-// Buy Button
-function buyButtonClicked() {
-    alert("Your Order is placed");
-    var cartContent = document.getElementsByClassName("cart-content")[0];
-    while (cartContent.hasChildNodes()) {
-        cartContent.removeChild(cartContent.firstChild);
-    }
-    updateTotal();
+
+    // // Get the "Buy Now" button
+    // var buyButton = document.querySelector(".btn-buy");
+
+    // // Check if the cart is empty
+    // var cartItems = document.querySelectorAll(".cart-item");
+    // if (cartItems.length === 0) {
+    //     // If there are no items in the cart, hide the button
+    //     buyButton.style.display = "none";
+    // } else {
+    //     // If there are items in the cart, show the button
+    //     buyButton.style.display = "block";
+    // }
 }
 
+// Buy Button
+function buyButtonClicked() {
+    var confirmationBox = document.createElement("div");
+    confirmationBox.classList.add("confirmation-box");
+    var confirmationBoxContent = `
+                            <h3>Are you sure you want to place this order?</h3>
+                            <div class="button-container">
+                                <button class="confirm-btn">Yes</button>
+                                <button class="cancel-btn">No</button>
+                            </div>
+                            `;
+    confirmationBox.innerHTML = confirmationBoxContent;
+    document.body.appendChild(confirmationBox);
+    var confirmBtn = document.querySelector(".confirm-btn");
+    var cancelBtn = document.querySelector(".cancel-btn");
+    confirmBtn.addEventListener("click", function () {
+        document.body.removeChild(confirmationBox);
+        var successBox = document.createElement("div");
+        successBox.classList.add("success-box");
+        var successBoxContent = `
+                                <p>Your order has been placed.</p>
+                                <button class="close-btn">Close</button>
+                                `;
+        successBox.innerHTML = successBoxContent;
+        document.body.appendChild(successBox);
+        var closeBtn = document.querySelector(".close-btn");
+        closeBtn.addEventListener("click", function () {
+            document.body.removeChild(successBox);
+            var cartContent = document.getElementsByClassName("cart-content")[0];
+            while (cartContent.hasChildNodes()) {
+                cartContent.removeChild(cartContent.firstChild);
+            }
+            updateTotal();
+        });
+    });
+    cancelBtn.addEventListener("click", function () {
+        document.body.removeChild(confirmationBox);
+    });
+}
 // Remove Items from Cart
 function removeCartItem(event) {
     var buttonClicked = event.target;
@@ -75,9 +118,28 @@ function addCartClicked(event) {
     var title = shopProducts.getElementsByClassName("product-title")[0].innerText;
     var price = shopProducts.getElementsByClassName("price")[0].innerText;
     var productImg = shopProducts.getElementsByClassName("product-img")[0].src;
-    addProductToCart(title, price, productImg);
-    updateTotal();
+    var outOfStock = shopProducts.querySelector(".out-of-stock");
+
+    if (outOfStock) {
+        var outOfStockBox = document.createElement("div");
+        outOfStockBox.classList.add("out-of-stock-box");
+        var outOfStockContent = `
+      <h3>Out of Stock</h3>
+      <p>The item you are trying to add is currently out of stock.</p>
+      <button class="close-btn">Close</button>
+    `;
+        outOfStockBox.innerHTML = outOfStockContent;
+        document.body.appendChild(outOfStockBox);
+        var closeBtn = document.querySelector(".close-btn");
+        closeBtn.addEventListener("click", function () {
+            document.body.removeChild(outOfStockBox);
+        });
+    } else {
+        addProductToCart(title, price, productImg);
+        updateTotal();
+    }
 }
+
 function addProductToCart(title, price, productImg) {
     var cartShopBox = document.createElement("div");
     cartShopBox.classList.add("cart-box");
@@ -125,4 +187,18 @@ function updateTotal() {
     total = Math.round(total * 100) / 100;
 
     document.getElementsByClassName("total-price")[0].innerText = "Ksh. " + total;
+
+    // Get the "Buy Now" button
+    var buyButton = document.querySelector(".btn-buy");
+
+    // Check if the cart is empty
+    if (total === 0) {
+        // If there are no items in the cart, hide the button
+        buyButton.style.display = "none";
+    } else {
+        // If there are items in the cart, show the button
+        buyButton.style.display = "block";
+    }
 }
+
+updateTotal();

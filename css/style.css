@@ -197,6 +197,136 @@ header {
 .add-cart:hover {
     background: hsl(249, 32%, 17%);
 }
+/* Buy Button rules */
+.confirmation-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: var(--bg-color);
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.confirmation-box h3 {
+    margin-top: 0;
+    font-size: 24px;
+    text-align: center;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.confirm-btn {
+    background-color: #4CAF50;
+    color: var(--bg-color);
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.confirm-btn:hover {
+    background: var(--text-color);
+}
+
+.cancel-btn {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.cancel-btn:hover {
+    background: var(--text-color);
+}
+.success-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: var(--bg-color);
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.success-box p {
+    margin-top: 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+.close-btn {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px auto;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    display: block;
+    width: 80%;
+}
+
+.close-btn:hover {
+    background: var(--text-color);
+}
+
+/* Out of Stock */
+.out-of-stock-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: var(--bg-color);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #333;
+}
+
+.out-of-stock-box button.close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.out-of-stock-box button.close-btn:hover {
+    background-color: var(--text-color);
+}
+
 /* Breakpoints / Making Responsive */
 @media (max-width: 1080px) {
     .nav {
@@ -232,3 +362,16 @@ header {
         width: 280px;
     }
 }
+
+/* .confirmation-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    z-index: 999;
+} */
