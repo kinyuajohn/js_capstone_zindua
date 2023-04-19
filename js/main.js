@@ -39,6 +39,19 @@ function ready() {
         var button = addCart[i];
         button.addEventListener("click", addCartClicked);
     }
+    // Buy Button Works
+    document
+        .getElementsByClassName("btn-buy")[0]
+        .addEventListener("click", buyButtonClicked);
+}
+// Buy Button
+function buyButtonClicked() {
+    alert("Your Order is placed");
+    var cartContent = document.getElementsByClassName("cart-content")[0];
+    while (cartContent.hasChildNodes()) {
+        cartContent.removeChild(cartContent.firstChild);
+    }
+    updateTotal();
 }
 
 // Remove Items from Cart
@@ -77,10 +90,10 @@ function addProductToCart(title, price, productImg) {
         }
     }
     var cartBoxContent = `
-                            <img src="img/product2.jpg" alt="" class="cart-img">
+                            <img src="${productImg}" alt="" class="cart-img">
                             <div class="detail-box">
-                                <div class="cart-product-title">Earbuds</div>
-                                <div class="cart-price">Ksh. 2500</div>
+                                <div class="cart-product-title">${title}</div>
+                                <div class="cart-price">${price}</div>
                                 <input type="number" value="1" class="cart-quantity">
                             </div>
                             <!-- Remove Cart -->
@@ -107,10 +120,9 @@ function updateTotal() {
         var price = parseFloat(priceElement.innerText.replace("Ksh. ", ""));
         var quantity = quantityElement.value;
         total = total + price * quantity
-        // if price contains some cents value
-        total = Math.round(total * 100) / 100;
-
-
-        document.getElementsByClassName("total-price")[0].innerText = "Ksh. " + total;
     }
+    // if price contains some cents value
+    total = Math.round(total * 100) / 100;
+
+    document.getElementsByClassName("total-price")[0].innerText = "Ksh. " + total;
 }
