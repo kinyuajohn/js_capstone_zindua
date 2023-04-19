@@ -304,17 +304,6 @@ header {
 }
 
 /* Out of Stock */
-/* .out-of-stock {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #f44336;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-} */
-
 .out-of-stock-box {
     position: fixed;
     top: 50%;
