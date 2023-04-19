@@ -43,29 +43,22 @@ function ready() {
     document
         .getElementsByClassName("btn-buy")[0]
         .addEventListener("click", buyButtonClicked);
+
+    // // Get the "Buy Now" button
+    // var buyButton = document.querySelector(".btn-buy");
+
+    // // Check if the cart is empty
+    // var cartItems = document.querySelectorAll(".cart-item");
+    // if (cartItems.length === 0) {
+    //     // If there are no items in the cart, hide the button
+    //     buyButton.style.display = "none";
+    // } else {
+    //     // If there are items in the cart, show the button
+    //     buyButton.style.display = "block";
+    // }
 }
+
 // Buy Button
-// function buyButtonClicked() {
-//     alert("Your Order is placed");
-//     var cartContent = document.getElementsByClassName("cart-content")[0];
-//     while (cartContent.hasChildNodes()) {
-//         cartContent.removeChild(cartContent.firstChild);
-//     }
-//     updateTotal();
-// }
-// function buyButtonClicked() {
-//     var confirmation = confirm("Are you sure you want to place this order?");
-//     if (confirmation) {
-//         alert("Your order is placed.");
-//         var cartContent = document.getElementsByClassName("cart-content")[0];
-//         while (cartContent.hasChildNodes()) {
-//             cartContent.removeChild(cartContent.firstChild);
-//         }
-//         updateTotal();
-//     }
-// }
-
-
 function buyButtonClicked() {
     var confirmationBox = document.createElement("div");
     confirmationBox.classList.add("confirmation-box");
@@ -104,30 +97,6 @@ function buyButtonClicked() {
         document.body.removeChild(confirmationBox);
     });
 }
-
-// function buyButtonClicked() {
-//     var confirmation = confirm("Are you sure you want to place this order?");
-//     if (confirmation) {
-//         var confirmationMessage = document.createElement("div");
-//         confirmationMessage.innerText = "Your order is placed.";
-//         confirmationMessage.classList.add("confirmation-message");
-//         document.body.appendChild(confirmationMessage);
-
-//         var cartContent = document.getElementsByClassName("cart-content")[0];
-//         while (cartContent.hasChildNodes()) {
-//             cartContent.removeChild(cartContent.firstChild);
-//         }
-//         updateTotal();
-
-//         setTimeout(() => {
-//             document.body.removeChild(confirmationMessage);
-//         }, 3000);
-//     }
-// }
-
-
-
-
 // Remove Items from Cart
 function removeCartItem(event) {
     var buttonClicked = event.target;
@@ -218,4 +187,18 @@ function updateTotal() {
     total = Math.round(total * 100) / 100;
 
     document.getElementsByClassName("total-price")[0].innerText = "Ksh. " + total;
+
+    // Get the "Buy Now" button
+    var buyButton = document.querySelector(".btn-buy");
+
+    // Check if the cart is empty
+    if (total === 0) {
+        // If there are no items in the cart, hide the button
+        buyButton.style.display = "none";
+    } else {
+        // If there are items in the cart, show the button
+        buyButton.style.display = "block";
+    }
 }
+
+updateTotal();
