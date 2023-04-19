@@ -58,6 +58,7 @@ header {
 .cart {
     position: fixed;
     top: 0;
+    bottom: 0;
     right: -100%;
     width: 360px;
     min-height: 100vh;
@@ -65,6 +66,7 @@ header {
     background: var(--bg-color);
     box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
     transition: 0.3s;
+    overflow-y: scroll;
 }
 .cart.active {
     right: 0;
