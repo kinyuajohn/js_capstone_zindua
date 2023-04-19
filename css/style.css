@@ -303,6 +303,47 @@ header {
     background: var(--main-color);
 }
 
+/* Out of Stock */
+/* .out-of-stock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+} */
+
+.out-of-stock-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: var(--bg-color);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #333;
+}
+
+.out-of-stock-box button.close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.out-of-stock-box button.close-btn:hover {
+    background-color: var(--text-color);
+}
+
 /* Breakpoints / Making Responsive */
 @media (max-width: 1080px) {
     .nav {

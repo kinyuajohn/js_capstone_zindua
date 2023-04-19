@@ -149,9 +149,28 @@ function addCartClicked(event) {
     var title = shopProducts.getElementsByClassName("product-title")[0].innerText;
     var price = shopProducts.getElementsByClassName("price")[0].innerText;
     var productImg = shopProducts.getElementsByClassName("product-img")[0].src;
-    addProductToCart(title, price, productImg);
-    updateTotal();
+    var outOfStock = shopProducts.querySelector(".out-of-stock");
+
+    if (outOfStock) {
+        var outOfStockBox = document.createElement("div");
+        outOfStockBox.classList.add("out-of-stock-box");
+        var outOfStockContent = `
+      <h3>Out of Stock</h3>
+      <p>The item you are trying to add is currently out of stock.</p>
+      <button class="close-btn">Close</button>
+    `;
+        outOfStockBox.innerHTML = outOfStockContent;
+        document.body.appendChild(outOfStockBox);
+        var closeBtn = document.querySelector(".close-btn");
+        closeBtn.addEventListener("click", function () {
+            document.body.removeChild(outOfStockBox);
+        });
+    } else {
+        addProductToCart(title, price, productImg);
+        updateTotal();
+    }
 }
+
 function addProductToCart(title, price, productImg) {
     var cartShopBox = document.createElement("div");
     cartShopBox.classList.add("cart-box");
