@@ -74,7 +74,15 @@ function addProductToCart(title, price, productImg) {
         alert("You have already added this item to cart");
     }
 }
-
+var cartBoxContent = `
+                        <img src="img/product2.jpg" alt="" class="cart-img">
+                        <div class="detail-box">
+                            <div class="cart-product-title">Earbuds</div>
+                            <div class="cart-price">Ksh. 2500</div>
+                            <input type="number" value="1" class="cart-quantity">
+                        </div>
+                        <!-- Remove Cart -->
+                        <i class='bx bxs-trash-alt cart-remove'></i>`;
 // Update Total
 function updateTotal() {
     var cartContent = document.getElementsByClassName("cart-content")[0];
