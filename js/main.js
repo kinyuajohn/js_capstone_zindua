@@ -45,14 +45,26 @@ function ready() {
         .addEventListener("click", buyButtonClicked);
 }
 // Buy Button
+// function buyButtonClicked() {
+//     alert("Your Order is placed");
+//     var cartContent = document.getElementsByClassName("cart-content")[0];
+//     while (cartContent.hasChildNodes()) {
+//         cartContent.removeChild(cartContent.firstChild);
+//     }
+//     updateTotal();
+// }
 function buyButtonClicked() {
-    alert("Your Order is placed");
-    var cartContent = document.getElementsByClassName("cart-content")[0];
-    while (cartContent.hasChildNodes()) {
-        cartContent.removeChild(cartContent.firstChild);
+    var confirmation = confirm("Are you sure you want to place this order?");
+    if (confirmation) {
+        alert("Your order is placed.");
+        var cartContent = document.getElementsByClassName("cart-content")[0];
+        while (cartContent.hasChildNodes()) {
+            cartContent.removeChild(cartContent.firstChild);
+        }
+        updateTotal();
     }
-    updateTotal();
 }
+
 
 // Remove Items from Cart
 function removeCartItem(event) {
