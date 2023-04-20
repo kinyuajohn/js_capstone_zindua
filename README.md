@@ -1,4 +1,4 @@
-# js_capstone_zindua
+# Jamii Shopper Ecommerce
                                 Jamii Shopper Ecommerce Website in HTML, CSS, JavaScript
 
 This website allows the users to be able to view a list of items with their prices and names. By clicking on the image or the item name, the user is taken to a new page which has the item description including the material, style e.t.c. By clicking on the Jamii shopper logo the user is taken back to a home page.
