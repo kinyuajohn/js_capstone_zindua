@@ -260,8 +260,6 @@ nav a {
 .search-btn:hover {
     background-color: var(--text-color);
 }
-
-
 .shop {
     margin-top: 2rem;
 }
@@ -284,6 +282,11 @@ nav a {
     height: auto;
     margin-bottom: 0.5rem;
 }
+/* Changes so that it fits when searched individually */
+/* .product-img {
+    max-width: 200px;
+    max-height: 200px;
+} */
 .product-title {
     font-size: 1.1rem;
     font-weight: 600;
