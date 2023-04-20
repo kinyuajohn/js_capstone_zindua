@@ -178,6 +178,7 @@ header {
 }
 
 
+
 .section-title {
     font-size: 1.5rem;
     font-weight: 600;
@@ -188,6 +189,36 @@ header {
 .shop {
     margin-top: 2rem;
 }
+
+/* Search Feature */
+
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .search-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: var(--text-color);
+    width: 300px;
+  }
+  .search-btn {
+    background-color: var(--main-color) ;
+    color: var(--bg-color);
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: -50px;
+  }
+
+  .search-btn :hover{
+    cursor: pointer;
+  }
+
 
 /* Shop Content */
 
@@ -211,6 +242,9 @@ header {
     width: 100%;
     height: auto;
     margin-bottom: 0.5rem;
+    /* Changes so that it fits when searched individually */
+    max-width: 200px;
+    max-height: 200px;
 }
 
 .product-title {
@@ -237,6 +271,24 @@ header {
 .add-cart:hover {
     background: hsl(249, 32%, 17%);
 }
+
+.add-cart:hover:after {
+    content: "Add to Cart";
+    /* padding-right: 10px; */
+    padding: auto;
+    position: absolute;
+    right: 1.5rem;
+    top: -150%;
+    right: 10px;
+    transform: translate(-30%, -30%);
+    color: var(--main-color);
+    font-size: 15px;
+    text-align :center;
+    transition: 0.4s;
+    font-weight: 500;
+    font-style: italic;
+  }
+
  /* Breakpoints/ Making Responsive */
 
  @media (max-width: 1080px) {
