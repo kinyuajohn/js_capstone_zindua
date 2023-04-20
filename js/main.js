@@ -200,5 +200,19 @@ function updateTotal() {
         buyButton.style.display = "block";
     }
 }
-
 updateTotal();
+
+// Search Feature
+const searchInput = document.querySelector('.search-input');
+const productBoxes = document.querySelectorAll('.product-box');
+searchInput.addEventListener('input', () => {
+    const searchTerm = searchInput.value.toLowerCase();
+    productBoxes.forEach(productBox => {
+        const productTitle = productBox.querySelector('.product-title').textContent.toLowerCase();
+        if (productTitle.includes(searchTerm)) {
+            productBox.style.display = 'block';
+        } else {
+            productBox.style.display = 'none';
+        }
+    });
+});
