@@ -61,10 +61,29 @@ header {
     font-weight: 400;
 }
 
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 50px;
+  }
+  nav li {
+    margin: 0 10px;
+  }
+  nav a {
+    color:var(--text-color);
+    text-decoration: none;
+  }
+
 #cart-icon {
     font-size: 1.5rem;
     cursor: pointer;
     float: right;
+    margin-top: -25px;
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 /* Cart */
