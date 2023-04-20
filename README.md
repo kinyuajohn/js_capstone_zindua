@@ -1,5 +1,5 @@
 # js_capstone_zindua
-                                               Jamii Shopper Ecommerce Website in HTML, CSS, JavaScript
+                                Jamii Shopper Ecommerce Website in HTML, CSS, JavaScript
 
 This website allows the users to be able to view a list of items with their prices and names. By clicking on the image or the item name, the user is taken to a new page which has the item description including the material, style e.t.c. By clicking on the Jamii shopper logo the user is taken back to a home page.
 The user is also able to view the contents of his or her cart simply by clicking on the cart icon at the top corner of the page.<br>
@@ -10,12 +10,12 @@ The website also has a search feature which allows the user to search for an ite
 
 The url link "https://jamiicommerce.netlify.app/" 
 
-                                                  This is our Home Page
+                                 This is our Home Page
 
 ![image](https://user-images.githubusercontent.com/124022273/233371994-64646e07-65a7-425e-b924-777cb77252d0.png)
 
 
-                                                   This is our products' page
+                                 This is our products' page
 
 ![image](https://user-images.githubusercontent.com/124022273/233368271-36eea94b-cea0-4b9e-a9d3-5a703d6dd325.png)
 ![image](https://user-images.githubusercontent.com/124022273/233368531-1a5467aa-7625-494a-a691-eee0e9935c5b.png)
