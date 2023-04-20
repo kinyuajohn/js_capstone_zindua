@@ -1,7 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-*{
+* {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -13,7 +12,7 @@
 }
 
 :root {
-    --main-color: #fd4646;
+    --main-color: #FD4646;
     --text-color: #171427;
     --bg-color: #fff;
 }
@@ -102,23 +101,28 @@ header {
     gap: 1rem;
     margin-top: 1rem;
 }
+
 .cart-img {
     width: 100px;
     height: 100px;
     object-fit: contain;
     padding: 10px;
 }
+
 .detail-box {
     display: grid;
     row-gap: 0.5rem;
 }
+
 .cart-product-title {
     font-size: 1rem;
     text-transform: uppercase;
 }
+
 .cart-price {
     font-weight: 500;
 }
+
 .cart-quantity {
     border: 1px solid var(--text-color);
     outline-color: var(--main-color);
@@ -126,24 +130,29 @@ header {
     text-align: center;
     font-size: 1rem;
 }
+
 .cart-remove {
     font-size: 24px;
     color: var(--main-color);
     cursor: pointer;
 }
+
 .total {
     display: flex;
     justify-content: flex-end;
     margin-top: 1.5rem;
     border-top: 1px solid var(--text-color);
 }
+
 .total-title {
     font-size: 1rem;
     font-weight: 600;
 }
+
 .total-price {
     margin-left: 0.5rem;
 }
+
 .btn-buy {
     display: flex;
     margin: 1.5rem auto 0 auto;
@@ -155,9 +164,11 @@ header {
     font-weight: 500;
     cursor: pointer;
 }
+
 .btn-buy:hover {
     background: var(--text-color);
 }
+
 #close-cart {
     position: absolute;
     top: 1rem;
@@ -249,7 +260,7 @@ footer ul li {
     list-style: none;
     font-family: 'Poppins', serif;
     font-size: 16px;
-    color: #f2f2f2;
+    color: #F2F2F2;
     line-height: 30px;
 }
 
@@ -257,9 +268,8 @@ footer ul li a {
     padding-top: 30px;
     font-family: 'Poppins', serif;
     font-size: 16px;
-    color: #f2f2f2;
+    color: #F2F2F2;
     line-height: 30px;
-    
 }
 
 .footer-sm {
@@ -270,12 +280,10 @@ footer ul li a {
 }
 
 .footer-sm h2 {
-    color: #f2f2f2;
-    
+    color: #F2F2F2;
 }
 
 /* Products details */
-
 .product1 {
     width: 370px;
     margin-top: 100px;
@@ -315,7 +323,6 @@ footer ul li a {
 }
 
 /* privacy policy*/
-
 .header-title {
     margin-top: 80px;
     text-align: center;
@@ -331,17 +338,8 @@ footer ul li a {
     padding-left: 80px;
     padding-right: 80px;
     line-height: 40px;
-    font-family: 'Poppins', sans-serif;;
+    font-family: 'Poppins', sans-serif;
+    ;
 }
 
 /* Responsive design*/
-
-@media only screen and (min-width: 1000px) {
-    .brands{
-        display:  none;
-    }
-    .about-us {
-        display: none;
-    }
-}
-
